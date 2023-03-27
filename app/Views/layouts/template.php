@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $title ?></title>
     <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>

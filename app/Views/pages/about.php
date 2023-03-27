@@ -2,9 +2,14 @@
 
 <?= $this->section('content') ?>
 
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col">
+            <?php if (session()->getFlashdata('message')) { ?>
+                <div class="alert alert-success mt-2" role="alert">
+                    <?= session()->getFlashdata('message'); ?>
+                </div>
+            <?php } ?>
             <h4><?= $title ?></h4>
             <a class="btn btn-primary mt-2" href="/item/create">+ Add New</a>
         </div>
@@ -27,7 +32,7 @@
                         <tr>
                             <td><?= $no ?></td>
                             <td><?= $item['item'] ?></td>
-                            <td><?= $item['item'] ?></td>
+                            <td><?= $item['stock'] ?></td>
                             <td>
                                 <a href="/about/<?= $item['id'] ?>" class="btn btn-primary">Detail</a>
                             </td>

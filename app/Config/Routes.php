@@ -29,11 +29,27 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//Home
 $routes->get('/', 'Pages::index');
+
+//HTTP Spoofing Method
+$routes->delete('item/delete/(:num)', 'Pages::delete/$1');
+
+//Items
 $routes->get('about/', 'Pages::about');
-$routes->get('about/(:segment)', 'Pages::detail/$1');
+$routes->get('about/(:any)', 'Pages::detail/$1');
 $routes->get('item/create', 'Pages::create');
+$routes->get('item/edit/(:num)', 'Pages::edit/$1');
+$routes->post('item/update/(:num)', 'Pages::update/$1');
+$routes->post('item/save', 'Pages::save');
+
 $routes->get('po/', 'Orders::index');
+$routes->get('po/create', 'Orders::createPo');
+$routes->post('po/save', 'Orders::savePo');
+$routes->get('detailpo/(:any)', 'Orders::detailPo/$1');
+
+
 $routes->get('do/', 'Orders::deliv_order');
 
 /*

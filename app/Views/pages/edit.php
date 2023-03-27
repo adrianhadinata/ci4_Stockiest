@@ -10,12 +10,12 @@
     </div>
     <div class="row">
         <div class="col-6">
-            <form action="/item/save" method="post">
+            <form action="/item/update/<?= $item['id'] ?>" method="post">
                 <?= csrf_field() ?>
                 <div class="form-group row">
                     <div class="col">
                         <label for="item">Item Name: </label>
-                        <input type="text" name="item" class="form-control <?= (validation_show_error('item')) ? 'is-invalid' : ''; ?> mt-2" value="<?= old('judul'); ?>" autofocus>
+                        <input type="text" name="item" class="form-control <?= (validation_show_error('item')) ? 'is-invalid' : ''; ?> mt-2" value="<?= $item['item']; ?>" autofocus>
                         <div class="invalid-feedback">
                             <?= validation_show_error('item'); ?>
                         </div>
