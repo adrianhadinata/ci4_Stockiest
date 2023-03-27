@@ -35,6 +35,8 @@ $routes->get('/', 'Pages::index');
 
 //HTTP Spoofing Method
 $routes->delete('item/delete/(:num)', 'Pages::delete/$1');
+$routes->delete('po/delete/(:num)', 'Orders::deletePo/$1');
+$routes->delete('do/delete/(:num)', 'Orders::deleteDo/$1');
 
 //Items
 $routes->get('about/', 'Pages::about');
@@ -44,13 +46,21 @@ $routes->get('item/edit/(:num)', 'Pages::edit/$1');
 $routes->post('item/update/(:num)', 'Pages::update/$1');
 $routes->post('item/save', 'Pages::save');
 
+//Purchase Orders
 $routes->get('po/', 'Orders::index');
 $routes->get('po/create', 'Orders::createPo');
 $routes->post('po/save', 'Orders::savePo');
 $routes->get('detailpo/(:any)', 'Orders::detailPo/$1');
+$routes->get('po/edit/(:num)', 'Orders::editPo/$1');
+$routes->post('po/update/(:num)', 'Orders::updatePo/$1');
 
-
+//Delivery Orders
 $routes->get('do/', 'Orders::deliv_order');
+$routes->get('do/create', 'Orders::createDo');
+$routes->post('do/save', 'Orders::saveDo');
+$routes->get('detaildo/(:any)', 'Orders::detailDo/$1');
+$routes->get('do/edit/(:num)', 'Orders::editDo/$1');
+$routes->post('do/update/(:num)', 'Orders::updateDo/$1');
 
 /*
  * --------------------------------------------------------------------

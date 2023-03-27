@@ -36,7 +36,7 @@
                             <td><?= $item['remarks'] ?></td>
                             <td><?= $item['amount'] ?></td>
                             <td>
-                                <a href="/do/<?= $item['id'] ?>" class="btn btn-primary">Detail</a>
+                                <a href="/detaildo/<?= $item['id'] ?>" class="btn btn-primary">Detail</a>
                             </td>
                         </tr>
                     <?php } ?>
