@@ -31,7 +31,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 //Home
-$routes->get('/', 'Pages::index');
+$routes->get('/dashboard', 'Pages::index');
+$routes->get('/', 'Auth::index');
+$routes->get('/logout', 'Auth::delete');
+$routes->post('/login', 'Auth::check');
 
 //HTTP Spoofing Method
 $routes->delete('item/delete/(:num)', 'Pages::delete/$1');
