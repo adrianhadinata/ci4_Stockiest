@@ -2,8 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Models\M_userModel;
+
 class Auth extends BaseController
 {
+    protected $helpers = ['form'];
+
+    public function __construct()
+    {
+        $this->M_userModel = new M_userModel();
+        date_default_timezone_set('Asia/Jakarta');
+    }
+
     public function index()
     {
         $data = [
@@ -15,7 +25,30 @@ class Auth extends BaseController
 
     public function check()
     {
-        return redirect()->to('/dashboard');
+        if (!$this->validate([ // Fungsi Validasi Inputan
+            'username' => 'required',
+            'password' => 'required'
+        ])) {
+            return redirect()->to('/')->withInput();
+        }
+
+        $username = $this->request->getVar('username');
+        $password = $this->request->getVar('password');
+
+
+        $validUser = $this->M_userModel->getUsername($username);
+
+        if ($validUser) {
+            if (password_verify($password, $validUser[0]["password_hash"])) {
+                return redirect()->to('/dashboard');
+            } else {
+                session()->setFlashdata('message', 'Username / password error');
+                return redirect()->to('/');
+            }
+        } else {
+            session()->setFlashdata('message', 'Username / password error');
+            return redirect()->to('/');
+        }
     }
 
     public function delete()
