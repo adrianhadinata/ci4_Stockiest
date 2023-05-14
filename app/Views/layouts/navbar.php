@@ -16,7 +16,7 @@
                     <a class="nav-link" href="/po">Purchase Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/do">Delivery Order</a>
+                    <a class="nav-link" href="/do">Mutation Stock</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Log Out</a>
