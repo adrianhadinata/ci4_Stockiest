@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "631af174721be61b389b2d61c575438e",
+    "content-hash": "d648ee3b65e8d352e12e15817702e7cd",
     "packages": [
         {
             "name": "codeigniter4/framework",
-            "version": "v4.3.3",
+            "version": "v4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/framework.git",
-                "reference": "e3821f9e58fadf16a89b3becb4a00e58d466f390"
+                "reference": "e91e4fa20bb4440bf21513fe9b702db2269ca921"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/e3821f9e58fadf16a89b3becb4a00e58d466f390",
-                "reference": "e3821f9e58fadf16a89b3becb4a00e58d466f390",
+                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/e91e4fa20bb4440bf21513fe9b702db2269ca921",
+                "reference": "e91e4fa20bb4440bf21513fe9b702db2269ca921",
                 "shasum": ""
             },
             "require": {
@@ -32,7 +32,7 @@
                 "codeigniter/coding-standard": "^1.5",
                 "fakerphp/faker": "^1.9",
                 "friendsofphp/php-cs-fixer": "3.13.0",
-                "kint-php/kint": "^5.0.4",
+                "kint-php/kint": "^5.0.3",
                 "mikey179/vfsstream": "^1.6",
                 "nexusphp/cs-config": "^3.6",
                 "phpunit/phpunit": "^9.1",
@@ -78,7 +78,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
-            "time": "2023-03-26T01:13:46+00:00"
+            "time": "2023-02-18T10:37:34+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -141,80 +141,6 @@
                 }
             ],
             "time": "2022-10-10T10:11:09+00:00"
-        },
-        {
-            "name": "myth/auth",
-            "version": "v1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lonnieezell/myth-auth.git",
-                "reference": "7d0347faa47bd754d2dc49593a9852800be73986"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lonnieezell/myth-auth/zipball/7d0347faa47bd754d2dc49593a9852800be73986",
-                "reference": "7d0347faa47bd754d2dc49593a9852800be73986",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.4 || ^8.0"
-            },
-            "provide": {
-                "codeigniter4/authentication-implementation": "1.0"
-            },
-            "require-dev": {
-                "codeigniter4/codeigniter4-standard": "^1.0",
-                "codeigniter4/devkit": "^1.0",
-                "codeigniter4/framework": "^4.1",
-                "mockery/mockery": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Myth\\Auth\\": "src"
-                },
-                "exclude-from-classmap": [
-                    "**/Database/Migrations/**"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Lonnie Ezell",
-                    "email": "lonnieje@gmail.com",
-                    "homepage": "http://newmythmedia.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Flexible authentication/authorization system for CodeIgniter 4.",
-            "homepage": "https://github.com/lonnieezell/myth-auth",
-            "keywords": [
-                "Authentication",
-                "authorization",
-                "codeigniter"
-            ],
-            "support": {
-                "issues": "https://github.com/lonnieezell/myth-auth/issues",
-                "source": "https://github.com/lonnieezell/myth-auth/tree/v1.2.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/lonnieezell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/mgatner",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/lonnieezell",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2022-07-13T18:35:46+00:00"
         },
         {
             "name": "psr/log",
@@ -1003,16 +929,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.6",
+            "version": "9.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b65d59a059d3004a040c16a82e07bbdf6cfdd115"
+                "reference": "86e761949019ae83f49240b2f2123fb5ab3b2fc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b65d59a059d3004a040c16a82e07bbdf6cfdd115",
-                "reference": "b65d59a059d3004a040c16a82e07bbdf6cfdd115",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/86e761949019ae83f49240b2f2123fb5ab3b2fc5",
+                "reference": "86e761949019ae83f49240b2f2123fb5ab3b2fc5",
                 "shasum": ""
             },
             "require": {
@@ -1085,8 +1011,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.6"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.5"
             },
             "funding": [
                 {
@@ -1102,7 +1027,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-27T11:43:46+00:00"
+            "time": "2023-03-09T06:34:10+00:00"
         },
         {
             "name": "psr/container",
