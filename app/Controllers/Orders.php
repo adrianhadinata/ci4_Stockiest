@@ -170,7 +170,7 @@ class Orders extends BaseController
     {
         $flag = '2';
         $data = [
-            'title' => 'Detail Purchase Order',
+            'title' => 'Detail Mutation Stock',
             'items' => $this->M_transactionModel->getTransactions($flag, $id)
         ];
 
