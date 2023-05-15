@@ -127,7 +127,7 @@ class Orders extends BaseController
     {
         $flag = '2';
         $data = [
-            'title' => 'Delivery Order',
+            'title' => 'Mutation Stock',
             'transactions' => $this->M_transactionModel->getTransactions($flag)
         ];
         return view('orders/delivery_orders', $data);;
@@ -136,7 +136,7 @@ class Orders extends BaseController
     public function createDo()
     {
         $data = [
-            'title' => 'Add New Delivery Order',
+            'title' => 'Add New Mutation Stock',
             'items' => $this->M_itemModel->getItem()
         ];
 
@@ -192,7 +192,7 @@ class Orders extends BaseController
     {
         $flag = '2';
         $data = [
-            'title' => 'Edit Delivery Order',
+            'title' => 'Edit Mutation Stock',
             'item' => $this->M_transactionModel->getTransactions($flag, $id)
         ];
 
