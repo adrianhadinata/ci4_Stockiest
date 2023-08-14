@@ -42,11 +42,11 @@ class Auth extends BaseController
             if (password_verify($password, $validUser[0]["password_hash"])) {
                 return redirect()->to('/dashboard');
             } else {
-                session()->setFlashdata('message', 'Username / password error');
+                session()->setFlashdata('message', 'password error');
                 return redirect()->to('/');
             }
         } else {
-            session()->setFlashdata('message', 'Username / password error');
+            session()->setFlashdata('message', 'Username error');
             return redirect()->to('/');
         }
     }

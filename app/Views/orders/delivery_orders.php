@@ -11,12 +11,12 @@
                 </div>
             <?php } ?>
             <h4><?= $title ?></h4>
-            <a class="btn btn-primary mt-2" href="/do/create">+ Add New</a>
+            <a class="btn btn-primary mt-2" href="/do/create" style="margin-bottom: 1rem;">+ Add New</a>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover" id="datatable" style="width: 100%">
                 <thead>
                     <tr>
                         <th>No.</th>
@@ -36,7 +36,7 @@
                             <td><?= $item['remarks'] ?></td>
                             <td><?= $item['amount'] ?></td>
                             <td>
-                                <a href="/detaildo/<?= $item['id'] ?>" class="btn btn-primary">Detail</a>
+                                <a href="/detaildo/<?= $item['id'] ?>"><button class="btn btn-primary" type="button">Detail</button></a>
                             </td>
                         </tr>
                     <?php } ?>
