@@ -26,7 +26,7 @@ class Pages extends BaseController
     public function about()
     {
         $data = [
-            'title' => 'Item List',
+            'title' => 'Item',
             'items' => $this->M_itemModel->getItem()
         ];;
         return view('pages/about', $data);

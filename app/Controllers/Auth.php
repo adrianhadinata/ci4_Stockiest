@@ -18,7 +18,7 @@ class Auth extends BaseController
     {
         $data = [
             'title' => 'Login Page',
-            'logo' => '/images/logo.png'
+            'logo' => '/images/you-logo-here.png'
         ];
         return view('welcome_message', $data);
     }

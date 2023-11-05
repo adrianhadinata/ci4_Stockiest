@@ -11,12 +11,12 @@
                 </div>
             <?php } ?>
             <h4><?= $title ?></h4>
-            <a class="btn btn-primary mt-2" href="/item/create">+ Add New</a>
+            <a class="btn btn-primary mt-2" href="/item/create"><i class="bi bi-plus-circle"></i> <?= $title ?></a>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-2">
         <div class="col">
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover" id="datatable" style="width: 100%">
                 <thead>
                     <tr>
                         <th>No.</th>
