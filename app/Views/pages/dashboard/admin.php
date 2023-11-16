@@ -2,11 +2,15 @@
 
 <?= $this->section('content') ?>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js" integrity="sha256-EVZCmhajjLhgTcxlGMGUBtQiYULZCPjt0uNTFEPFTRk=" crossorigin="anonymous"></script>
-
+<style>
+    html, body {
+        overflow:hidden !important;
+    }
+</style>
 <div class="container-fluid" style="overflow: auto;">
     <div class="row vh-100 mt-5">
         <div class="col-md-6 d-flex mt-2">
-            <div class="card text-center w-100" style="height: 33rem">
+            <div class="card card-animate text-center w-100" style="height: 33rem">
                 <div class="card-header">
                     7 Day Sales Summary
                 </div>
@@ -21,7 +25,7 @@
         <div class="col-md-6 mt-2">
             <div class="row">
                 <div class="col-md-6 d-flex">
-                    <div class="card text-center w-100 text-white bg-warning" style="max-height: 18rem; height: 16rem">
+                    <div class="card card-animate text-center w-100 text-white bg-warning" style="max-height: 18rem; height: 16rem">
                         <div class="card-header">
                             Today's Sales
                         </div>
@@ -31,7 +35,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex">
-                    <div class="card text-center w-100 text-white bg-success" style="max-height: 18rem; height: 16rem">
+                    <div class="card card-animate text-center w-100 text-white bg-success" style="max-height: 18rem; height: 16rem">
                         <div class="card-header">
                             Today's Net Profit
                         </div>
@@ -43,7 +47,7 @@
             </div>
             <div class="row mt-3">
                 <div class="col-md-6 d-flex">
-                    <div class="card text-center w-100 text-white bg-primary" style="max-height: 18rem; height: 16rem">
+                    <div class="card card-animate text-center w-100 text-white bg-primary" style="max-height: 18rem; height: 16rem">
                         <div class="card-header">
                             Incoming Stock
                         </div>
@@ -53,7 +57,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex">
-                    <div class="card text-center w-100 text-white bg-danger" style="max-height: 18rem; height: 16rem">
+                    <div class="card card-animate text-center w-100 text-white bg-danger" style="max-height: 18rem; height: 16rem">
                         <div class="card-header">
                             Outbound Stock
                         </div>

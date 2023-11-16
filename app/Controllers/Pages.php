@@ -62,6 +62,7 @@ class Pages extends BaseController
 
     public function save()
     {
+        dd($_POST);
         if (!$this->validate([ // Fungsi Validasi Inputan
             'item' => 'required|is_unique[m_item.item]'
         ])) {

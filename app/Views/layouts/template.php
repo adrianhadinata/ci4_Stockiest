@@ -16,20 +16,19 @@
         html {
             margin: 0;
             padding: 0;
-            overflow: hidden;
         }
 
         * {
             box-sizing: border-box;
         }
 
-        .card {
+        .card-animate {
             cursor: pointer;
             animation: cubic-bezier(0.215, 0.610, 0.355, 1);
             transition: 0.5s;
         }
 
-        .card:hover {
+        .card-animate:hover {
             scale: 1.1;
         }
 
@@ -40,7 +39,7 @@
         }
 
         footer {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
             height: 25px;
@@ -48,7 +47,7 @@
     </style>
 </head>
 
-<body>
+<body data-bs-theme="dark">
 
     <?= $this->include('layouts/navbar') ?>
     
@@ -62,6 +61,7 @@
     <script src="/js/vfs_fonts.js"></script>
     <script src="/js/cdn.datatables.net_buttons_2.4.1_js_buttons.html5.min.js"></script>
     <script src="/js/sweetalert2@11.js"></script>
+    <script src="/js/jquery.mask.js"></script>
 
     <?= $this->renderSection('content'); ?>
 
@@ -84,10 +84,24 @@
                 'excel'
             ]
         });
+
+        $("#Switch").on("click", function(){
+            if($(this).hasClass('checked')) {
+                $('body').attr('data-bs-theme', 'dark');
+                $(this).removeClass('checked');
+                $('footer').removeClass('bg-white');
+                $('footer').addClass('bg-dark');
+            } else {
+                $('body').removeAttr('data-bs-theme');
+                $(this).addClass('checked');
+                $('footer').removeClass('bg-dark');
+                $('footer').addClass('bg-white');
+            }
+        })
     });
 </script>
 
-<footer class="text-center bg-white">Copyright &copy; Your Company Name </footer>
+<footer class="text-center bg-dark">Copyright &copy; Your Company Name </footer>
 
 </body>
 
