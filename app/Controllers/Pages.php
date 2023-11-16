@@ -20,7 +20,12 @@ class Pages extends BaseController
             'title' => 'Home',
             'warehouse' => '/images/4664-logistic-warehouse-json-animation.gif'
         ];
-        return view('pages/kontak', $data);
+
+        if (in_groups("staff")) {
+            return view('pages/dashboard/staff', $data);
+        } else {
+            return view('pages/dashboard/admin', $data);
+        }    
     }
 
     public function about()

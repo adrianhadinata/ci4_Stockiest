@@ -22,24 +22,49 @@
         * {
             box-sizing: border-box;
         }
+
+        .card {
+            cursor: pointer;
+            animation: cubic-bezier(0.215, 0.610, 0.355, 1);
+            transition: 0.5s;
+        }
+
+        .card:hover {
+            scale: 1.1;
+        }
+
+        @media (max-width: 991px) {
+            .vr-line {
+                display: none;
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+        }
     </style>
 </head>
 
 <body>
 
     <?= $this->include('layouts/navbar') ?>
-
-    <?= $this->renderSection('content'); ?>
-
+    
     <script src="/js/print.min.js"></script>
     <script src="/js/code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/cdn.datatables.net_1.13.6_js_jquery.dataTables.min.js"></script>
     <script src="/js/cdn.datatables.net_buttons_2.4.1_js_dataTables.buttons.min.js"></script>
     <script src="/js/jszip.min.js"></script>
     <script src="/js/cdnjs.cloudflare.com_ajax_libs_pdfmake_0.1.53_pdfmake.min.js"></script>
     <script src="/js/vfs_fonts.js"></script>
     <script src="/js/cdn.datatables.net_buttons_2.4.1_js_buttons.html5.min.js"></script>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/sweetalert2@11.js"></script>
+
+    <?= $this->renderSection('content'); ?>
+
     <script>
     $(document).ready(function() {
         $('#datatable').DataTable( {
@@ -61,6 +86,9 @@
         });
     });
 </script>
+
+<footer class="text-center bg-white">Copyright &copy; Your Company Name </footer>
+
 </body>
 
 </html>

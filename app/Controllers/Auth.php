@@ -20,7 +20,16 @@ class Auth extends BaseController
             'title' => 'Login Page',
             'logo' => '/images/you-logo-here.png'
         ];
-        return view('welcome_message', $data);
+        return view('auth/login', $data);
+    }
+
+    public function register()
+    {
+        $data = [
+            'title' => 'Register',
+            'logo' => '/images/you-logo-here.png'
+        ];
+        return view('auth/register', $data);
     }
 
     public function check()

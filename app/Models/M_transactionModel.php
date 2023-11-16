@@ -42,7 +42,6 @@ class M_transactionModel extends Model
             ";
             $query = $this->db->query($data);
             return $query->getResultArray();
-            // return $this->where(['id' => $id])->first();
         }
     }
 }
